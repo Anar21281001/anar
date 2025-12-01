@@ -1,1 +1,81 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Calcr</title>
+    <style>
+        .dumas {
+            background-color: aqua; 
+            padding: 20px;
+            width: 200px;
+            flex-direction: row;
+        }
+        body {
+            background-color: #2c1777;
+                display: flex;
+                 justify-content: center; 
+                align-items: center; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nga">
+        <div class="dumas">
+            <h3>4 тоо оруул:</h3>
+
+          <p>+</p>  <input id="n1" placeholder="Тоог 1"><br><br>
+            <p>-</p> <input id="n2" placeholder="Тоог 2"><br><br>
+           <p>*</p> <input id="n3" placeholder="Тоог 3"><br><br>
+          <p>/</p>  <input id="n4" placeholder="Тоог 4"><br><br>
+
+            <button onclick="calc()">Submit</button>
+        </div>
+    </div>
+<script>
+
+function calc() {
+
+    let a = document.getElementById("n1").value;
+    let b = document.getElementById("n2").value;
+    let c = document.getElementById("n3").value;
+    let d = document.getElementById("n4").value;
+
+
+    if (a==="" || b==="" || c==="" || d==="" ||
+        isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d)) {
+
+        alert("Та тоогоо оруулна уу!");
+        return;
+    }
+
+    a = Number(a);
+    b = Number(b);
+    c = Number(c);
+    d = Number(d);
+
+    
+    let plus   = a + b + c + d;
+    let minus  = a - b - c - d;
+    let mul    = a * b * c * d;
+    let divide = a / b / c / d;
+
+
+    document.getElementById("n1").value = "+ = " + plus;
+    document.getElementById("n2").value = "- = " + minus;
+    document.getElementById("n3").value = "* = " + mul;
+    document.getElementById("n4").value = "% = " + divide;
+
+
+    setTimeout(function(){
+        document.getElementById("n1").value = "";
+        document.getElementById("n2").value = "";
+        document.getElementById("n3").value = "";
+        document.getElementById("n4").value = "";
+    }, 4000);
+}
+
+</script>
+
+</body>
+</html>
