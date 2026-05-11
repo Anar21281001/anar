@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-4">
+
+  <div class="flex flex-col gap-4 min-h-screen">
+
+    <!--B-->
+    <div class="hidden lg:flex flex-col gap-4 flex-1">
+      <div class="bg-blue-300 p-6">T</div>
+
+      <div class="grid grid-cols-[1fr_2fr_1fr] gap-4 flex-1">
+        <div class="bg-red-300 p-6">L</div>
+        <div class="bg-yellow-300 p-6">C</div>
+        <div class="bg-green-300 p-6">R</div>
+      </div>
+
+      <div class="bg-blue-500 text-white p-6">B</div>
+    </div>
+
+    <!--T-->
+    <div class="hidden md:flex lg:hidden flex-col gap-4">
+
+      <div class="bg-blue-300 p-6">T</div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-red-300 p-6">L</div>
+        <div class="bg-green-300 p-6">R</div>
+      </div>
+
+      <div class="bg-yellow-300 p-6">C</div>
+
+      <div class="bg-blue-500 text-white p-6">B</div>
+
+    </div>
+
+    <!--M-->
+    <div class="flex md:hidden flex-col gap-4">
+
+      <div class="bg-blue-300 p-6">T</div>
+      <div class="bg-red-300 p-6">L</div>
+      <div class="bg-yellow-300 p-6">C</div>
+      <div class="bg-green-300 p-6">R</div>
+      <div class="bg-blue-500 text-white p-6">B</div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
